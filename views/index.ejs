@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Read and update content attributes accordingly  -->
+
+    <meta
+      name="description"
+      content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations."
+    />
+
+    <!-- Google / Search Engine Tags -->
+<meta itemprop="name" content="Harshit's Portfolio">
+<meta itemprop="description" content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations.">
+
+<!-- Reference screenshot of updated site's header in place of content -->
+<meta itemprop="image" content="assets/images/sharing-card.png">
+
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://ossportfolio.netlify.app">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Harshit's Portfolio">
+<meta property="og:description" content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations.">
+
+<!-- Reference screenshot of updated site's header in content -->
+<meta property="og:image" content="assets/images/sharing-card.png">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Harshit's Portfolio">
+<meta name="twitter:description" content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations.">
+
+<!-- Reference screenshot of updated site's header in content -->
+<meta name="twitter:image" content="assets/images/sharing-card.png">
+
+
+<!-- Update favicon href attribute with image of yourself -->
+    <link
+      rel="shortcut icon"
+      href="/assets/images/favicon.png"
+      type="image/png"
+    />
+
+    <!-- Preloading fonts for better performance -->
+
+    <link
+      rel="preload"
+      href="assets/fonts/Mona-Sans.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link rel="stylesheet" href="/css/style.css"  />
+    <script src="/js/script.js" defer></script>
+
+    <!-- Your name here -->
+    <title>Harshit's Portfolio</title>
+  </head>
+
+  <body>
+
+    <script>
+      const theme = localStorage.getItem("theme") || "dark";
+      document.body.classList.add(theme);
+    </script>
+
+    <header class="header">
+
+      <div class="menu-btn-container">
+        <div class="container">
+          <button type="button"  class="menu-btn">menu</button>
+        </div>
+      </div>
+
+      <nav class="nav hidden">
+        <ol class="nav-items">
+          <li class="nav-item"><a href="#">Home</a></li>
+          <li class="nav-item"><a href="#work">My Work</a></li>
+          <li class="nav-item"><a href="#blog">See Blog</a></li>
+          <li class="nav-item"><a href="#skills">My Skills</a></li>
+          <li class="nav-item">
+            <a href="#contact" data-focused="last-focused">Contact</a>
+          </li>
+        </ol>
+      </nav>
+
+      <div class="container">
+        <div class="header-textbox">
+          <!-- Replace with your name and job title -->
+          <h1 class="h1">
+            <span>Hi, I'm Harshit Kumar</span>
+            <span>Backend Web Developer</span>
+          </h1>
+
+          <!-- Add a small introductory paragraph about yourself -->
+          <p class="header-text">
+            A Backend software engineer and Database designer
+            passionate about creating user-friendly and performant websites.
+          </p>
+
+          <div class="header-btns">
+            <a href="#contact" class="btn btn-cta">Contact me</a>
+            <a href="#work" class="btn btn-secondary">See my work</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Replace alt with client/company name and src attributes of images with path to relative img of client logo -->
+
+    <!-- <main>
+      <section class="client">
+        <div class="container">
+          <h2 class="h2">Trusted by</h2>
+          <div class="logos"> 
+            
+             <div class="logo-group">
+              <img
+                loading="lazy"
+                src="assets/images/trusted-by/stripe.svg"
+                alt="Ideacraft"
+                class="logo hide to-top"
+              />
+
+              <img
+                loading="lazy"
+                src="assets/images/trusted-by/datastax.svg"
+                alt="Golden grid"
+                class="logo"
+              />
+
+              <img
+                loading="lazy"
+                src="assets/images/trusted-by/coke.svg"
+                alt="Theia"
+                class="logo hide to-bottom"
+              />
+            </div>
+            <div class="logo-group">
+              <img
+                loading="lazy"
+                src="assets/images/trusted-by/gm.svg"
+                alt="General motors"
+                class="logo hide to-top"
+              />
+
+              <img
+                loading="lazy"
+                src="assets/images/trusted-by/shares.svg"
+                alt="Chippy"
+                class="logo"
+              />
+              <img
+                loading="lazy"
+                src="assets/images/trusted-by/shopify.svg"
+                alt="Shopify"
+                class="logo hide to-bottom"
+              />
+            </div>
+            <div class="logo-group">
+              <img
+                loading="lazy"
+                src="assets/images/trusted-by/agency-elevation.svg"
+                alt="Agency elevation"
+                class="logo hide to-top"
+              /><img
+                loading="lazy"
+                src="assets/images/trusted-by/gitlab.svg"
+                alt="Ron jones"
+                class="logo"
+              /><img
+                loading="lazy"
+                src="assets/images/trusted-by/duolingo.svg"
+                alt="Mighty furniture's"
+                class="logo hide to-bottom"
+              />
+            </div>
+            <div class="logo-group">
+              <img
+                loading="lazy"
+                src="assets/images/trusted-by/coyote.svg"
+                alt="Bulls eye"
+                class="logo hide to-top"
+              />
+              <img
+                loading="lazy"
+                src="assets/images/trusted-by/astrato.svg"
+                alt="Chippy"
+                class="logo"
+              />
+              <img
+                loading="lazy"
+                src="assets/images/trusted-by/mercado.svg"
+                alt="Fastlane"
+                class="logo hide to-bottom"
+              />
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <section class="work">
+        <div class="container">
+          <h2 class="h2" id="work">Selected Work</h2>
+          <div class="work-boxes">
+            <div class="work-box">
+              <div class="work-textbox">
+                <!-- Add your project title here -->
+                <h3 class="h3">Secure Vault</h3>
+                <!-- Add small description of your project  -->
+                <p class="work-text">
+                  A free to use, minimal and accessible File encryption tool
+                </p>
+                <!-- Add technologies you used to build the project -->
+                <ol class="work-technologies">
+                  <li>React</li>
+                  <li>LibSodium</li>
+                  <li>Postgresql</li>
+                  <li>Node</li>
+                </ol>
+
+                <div class="work-links">
+                  <!-- Add url of project in href attribute -->
+                  <a href="https://github.com/Harshithk00/hackcult" target="_blank" rel="noopener" class="link"
+                    >Explore this project</a
+                  >
+                    <img
+                      src="assets/images/social-links/github.svg"
+                      alt="GitHub"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+
+         <!-- Update img src and alt attribute  -->
+
+              <picture class="work-img">
+                <img
+                  loading="lazy"
+                  src="assets/images/work/private.png"
+                  alt="agency elevation"
+                />
+              </picture>
+            </div>
+            <div class="work-box">
+              <div class="work-textbox">
+                <!-- Add your project title here -->
+                <h3 class="h3">Blood Donation (UnderDevelopment)</h3>
+                <!-- Add small description of your project  -->
+
+                <p class="work-text">Emergency blood donation System.</p>
+                <ol class="work-technologies">
+                  <li>React</li>
+                  <li>Postgresql</li>
+                  <li>Shadcn</li>
+                </ol>
+                <div class="work-links">
+                  <!-- Add url of project in href attribute -->
+                  <a href="#" target="_blank" rel="noopener" class="link"
+                    >Explore this project</a
+                  >
+
+                    <img
+                      src="assets/images/social-links/github.svg"
+                      alt="GitHub"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+         <!-- Update img src and alt attribute  -->
+              <picture class="work-img">
+                <img
+                  loading="lazy"
+                  src="assets/images/work/blood.png"
+                  alt="portfolio template"
+                />
+              </picture>
+            </div>
+            <div class="work-box">
+              <div class="work-textbox">
+                <!-- Add your project title here -->
+                <h3 class="h3">File Wizard (UnderDevelopment)</h3>
+                <!-- Add small description of your project  -->
+                <p class="work-text">
+                  Website for Chatting and for file sharing
+                </p>
+                <ol class="work-technologies">
+                  <li>Next.js</li>
+                  <li>AWS S3</li>
+                  <li>Postgresql</li>
+                </ol>
+                <div class="work-links">
+                  <!-- Add url of project in href attribute -->
+                  <a href="https://github.com/Harshithk00/FileWizard" target="_blank" rel="noopener" class="link"
+                    >Explore this project</a
+                  >
+
+                   <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener"
+                    title="Source code"
+                  >
+                    <img
+                      src="assets/images/social-links/github.svg"
+                      alt="GitHub"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+         
+              <picture class="work-img">
+                <img
+                  loading="lazy"
+                  src="assets/images/work/filewizard.png"
+                  alt="contribute dev"
+                />
+              </picture>
+            </div>
+
+            <div class="work-box">
+              <div class="work-textbox">
+                <!-- Add your project title here -->
+                <h3 class="h3">Quiz App</h3>
+                <!-- Add small description of your project  -->
+                <p class="work-text">
+                  Quiz Website (Fun Fact: I hosted a quiz on this website for my C++ class)
+                </p>
+                <ol class="work-technologies">
+                  <li>Node</li>
+                  <li>EJS</li>
+                  <li>Postgresql</li>
+                </ol>
+                <div class="work-links">
+                  <!-- Add url of project in href attribute -->
+                  <a href="https://github.com/Harshithk00/finalcpp" target="_blank" rel="noopener" class="link"
+                    >Explore this project</a
+                  >
+
+                   <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener"
+                    title="Source code"
+                  >
+                    <img
+                      src="assets/images/social-links/github.svg"
+                      alt="GitHub"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+         
+              <picture class="work-img">
+                <img
+                  loading="lazy"
+                  src="assets/images/work/quiz.png"
+                  alt="contribute dev"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+
+      <section class="article">
+        <div class="container">
+          <h2 class="h2" id="blog">Random Talks</h2>
+          <div class="article-boxes">
+            <article class="article-box featured-article">
+              <div class="article-textbox">
+                <div>
+                  <h3 class="h3">
+                    Auto-login for my college wifi at startup
+                  </h3>
+                  <p class="article-text">
+                    It was a lengthy process to login to my college wifi at
+                    startup, so I made a script to auto-login to my college wifi. 
+                  </p>
+                </div>
+                <div class="article-info">
+                  <a href="https://github.com/Harshithk00/sonicwall-autologin" class="link" target="_blank" rel="noopener"
+                    >Link</a
+                  >
+                  
+                </div>
+              </div>
+              <picture class="article-illustration">
+                <img
+                  src="assets/images/talks/article1.gif"
+                  alt="MacBook Pro"
+                  loading="lazy"
+                />
+              </picture>
+            </article>
+            <article class="article-box">
+              <div class="article-textbox">
+                <div>
+                  <h3 class="h4">Discord bot with AI</h3>
+                  <p class="article-text">
+                    Comming soon
+                  </p>
+                </div>
+                <div class="article-info">
+                  <!-- <a href="" class="link" target="_blank" rel="noopener"
+                    >Continue reading</a
+                  > -->
+                  <!-- <span class="reaction-count">
+                    <img
+                      src="./assets/images/heart-outline.svg"
+                      alt="heart"
+                      loading="lazy"
+                    />
+                    47
+                  </span> -->
+                </div>
+              </div>
+            </article>
+            <article class="article-box">
+              <div class="article-textbox">
+                <div>
+                  <h3 class="h4">
+                    Webpage for Photos
+                  </h3>
+                  <p class="article-text">
+                    Comming soon
+                  </p>
+                </div>
+                <!-- <div class="article-info">
+                  <a href="" class="link" target="_blank" rel="noopener"
+                    >Continue reading</a
+                  >
+                </div> -->
+              </div>
+            </article>
+            <!-- <article class="article-box">
+              <div class="article-textbox">
+                <div>
+                  <h3 class="h4">b</h3>
+                  <div class="article-text">
+                    b
+                  </div>
+                </div>
+                <div class="article-info">
+                  <a href="" class="link" target="_blank" rel="noopener"
+                    >Continue reading</a
+                  >
+                   <span class="reaction-count">
+                    <img
+                      loading="lazy"
+                      src="./assets/images/heart-outline.svg"
+                      alt="heart"
+                    />
+                    350
+                  </span> 
+                </div>
+              </div>
+            </article> -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Update skills-img src, alt  and title attributes I have added some other logos in assets/images/skill for your convenience feel free to pick one if required  -->
+
+      <section class="skills">
+        <div class="container">
+          <h2 class="h2" id="skills">My Toolkit</h2>
+          <div class="skills-imgs">
+                <img src="assets/images/skills/postman.png" alt="postman" class="skills-img" loading="lazy" title="Postman">
+                <img src="assets/images/skills/aws.webp" alt="aws" class="skills-img" loading="lazy" title="aws">
+                 <img src="assets/images/skills/react.webp" alt="React" class="skills-img" loading="lazy" title="React">
+                 <img src="assets/images/skills/pg.png" alt="pg" class="skills-img" loading="lazy" title="pg">
+                 <img src="assets/images/skills/shell.webp" alt="Shell" class="skills-img" loading="lazy" title="Shell">
+                 <img src="assets/images/skills/next-js.webp" alt="NextJS" class="skills-img" loading="lazy" title="NextJS">
+                 
+                 <img src="assets/images/skills/typescript.webp" alt="Typescript" class="skills-img" loading="lazy" title="Typescript">
+                 <img src="assets/images/skills/git.webp" alt="Git" class="skills-img" loading="lazy" title="Git">
+                 <img src="assets/images/skills/html.webp" alt="CSS" class="skills-img" loading="lazy" title="CSS">
+                 <img src="assets/images/skills/js.webp" alt="JavaScript" class="skills-img" loading="lazy" title="JavaScript">
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Replace testimonials, author name, author job, img src and, alt attributes -->
+
+      <!-- <section>
+        <h2 class="h2">Testimonials</h2>
+        <div class="container">
+          <ol class="testimonials">
+            <li class="testimonial">
+              <blockquote class="testimonial-text">
+               
+              </blockquote>
+              <figure class="testimonial-author">
+                <img
+                  src="assets/images/testimonials/rich-harris.png"
+                  alt="Rich Harris"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <h3 class="testimonial-author-name">Harris Kareem</h3>
+                  <p class="testimonial-author-job">Developer @Outlets</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="testimonial">
+              <blockquote class="testimonial-text">
+                
+              </blockquote>
+              <figure class="testimonial-author">
+                <img
+                  src="assets/images/testimonials/frank-mcsherry.webp"
+                  alt="Andrew Mead"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <h3 class="testimonial-author-name">
+                   Andrew Mead
+                  </h3>
+                  <p class="testimonial-author-job">Chief Scientist @Logos
+                  </p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="testimonial">
+              <blockquote class="testimonial-text">
+             
+                
+              </blockquote>
+              <figure class="testimonial-author">
+                <img
+                  src="assets/images/testimonials/brian-hirsh.png"
+                  alt="Brian Hirsh"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <h3 class="testimonial-author-name">Brian Hirsh</h3>
+                  <p class="testimonial-author-job">Head @Zero-in</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="testimonial">
+              <blockquote class="testimonial-text">
+                
+              </blockquote>
+              <figure class="testimonial-author">
+                <img
+                  src="assets/images/testimonials/adam.png"
+                  alt="Adam Argalye"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <h3 class="testimonial-author-name">Adam Argalye</h3>
+                  <p class="testimonial-author-job">SWE @Google</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="testimonial">
+              <blockquote class="testimonial-text">
+              
+              </blockquote>
+              <figure class="testimonial-author">
+                <img
+                  src="assets/images/testimonials/val-head.png"
+                  alt="Val Head"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <h3 class="testimonial-author-name">Val Head</h3>
+                  <p class="testimonial-author-job">CEO @Engines</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="testimonial">
+              <blockquote class="testimonial-text">
+                
+              </blockquote>
+              <figure class="testimonial-author">
+                <img
+                  src="assets/images/testimonials/tim-satterwhite.webp"
+                  alt="Gary Simon"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <h3 class="testimonial-author-name">Gary Simon</h3>
+                  <p class="testimonial-author-job">A11y Advocate @W3C</p>
+                </figcaption>
+              </figure>
+            </li>
+          </ol>
+        </div>
+      </section> -->
+
+      <section class="contact">
+        <div class="container">
+          <h2 class="h2" id="contact">Send Message</h2>
+          <div class="contact-content">
+            <div class="contact-textbox">
+              <!-- Please comment this component if you're not available for hire -->
+              <strong href="#" class="hire-alert">
+                <span class="indicator"></span>
+                Available for hire
+              </strong>
+              <p class="contact-text">
+                As a software engineer, I construct web interfaces and design
+                systems with a special love for accessibility and the
+                performance. I tend to code things from scratch and enjoy
+                bringing ideas to life.
+              </p>
+              <p class="contact-text">
+                I'm also an open-source developer, and in my spare time.
+              </p>
+              <!-- Replace src with your signatures and name -->
+              <!-- <img
+                src="assets/images/signatures.png"
+                alt="Harshit's Signatures"
+                class="signatures"
+                loading="lazy"
+              /> -->
+              <h6 class="h3">
+                -Harshit
+              </h6>
+            </div>
+            <form action="/send-email" method="POST" class="contact-form">
+              
+              <div class="form-field">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required />
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  inputmode="email"
+                />
+              </div>
+              <div class="form-field">
+                <label for="message">How can I help you?</label>
+                <textarea name="message" id="message" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-cta">Send</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <!-- Update href and src attributes -->
+          <nav>
+            <ol class="footer-links">
+              <li class="footer-link">
+                <a title="GitHub" href="https://github.com/Harshithk00" target="_blank" rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/github.svg"
+                    alt="GitHub"
+                /></a>
+              </li>
+              <li class="footer-link">
+                <a title="Codepen" href="https://www.instagram.com/_harshit___kumar_/" target="_blank" rel="noopener"
+                  >
+                  <!-- <img
+                    loading="lazy"
+                    src="assets/images/social-links/instagram.jpg"
+                    alt="Instagram"
+                /> -->
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 50 50"
+                style="fill:#FFFFFF;">
+                <path d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z"></path>
+                </svg>
+              </a>
+              </li>
+              <li class="footer-link">
+                <a title="Linkedin" href="https://www.linkedin.com/in/harshitkumar300/" target="_blank" rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/linkedin.svg"
+                    alt="Linkedin"
+                /></a>
+              </li>
+              <li class="footer-link">
+                <a title="Twitter" href="https://x.com/Harshithk00" target="_blank" rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/twitter.svg"
+                    alt="Twitter"
+                /></a>
+              </li>
+            </ol>
+          </nav>
+          <p class="footer-text">
+            <!-- &copy; <span>2025</span> - <a target="_blank" rel="noopener" href="https://github.com/Harshithk00">Harshit.</a> -->
+             <a>Contact me - <a href="mailto:contact@harshitk.me" target="_blank" rel="noopener">Contact@harshitk.me</a>
+          </p>
+          <label class="theme-switch" for="theme-switch">
+            <span>Dark Theme</span>
+            <input type="checkbox" id="theme-switch" role="switch"/>
+          </label>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
